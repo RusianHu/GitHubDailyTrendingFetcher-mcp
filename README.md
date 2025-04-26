@@ -1,5 +1,6 @@
 # GitHub Trending MCP
 
+[![smithery badge](https://smithery.ai/badge/@RusianHu/githubdailytrendingfetcher-mcp)](https://smithery.ai/server/@RusianHu/githubdailytrendingfetcher-mcp)
 这是一个基于 FastMCP 框架的 GitHub 热门仓库获取工具，可以一次性获取 GitHub 当日的可选个数的热门仓库的详细信息，包括名称、链接、描述和 README 内容。
 这样你就不用一篇一篇的翻README来总结博客了，可以节省AI 的 Tokens 。
 
@@ -12,6 +13,14 @@
 - 自动处理同名文件，避免覆盖
 
 ## 安装方法
+
+### Installing via Smithery
+
+To install githubdailytrendingfetcher-mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@RusianHu/githubdailytrendingfetcher-mcp):
+
+```bash
+npx -y @smithery/cli install @RusianHu/githubdailytrendingfetcher-mcp --client claude
+```
 
 ### 从仓库安装
 
