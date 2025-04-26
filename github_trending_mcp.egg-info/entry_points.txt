@@ -1,0 +1,2 @@
+[console_scripts]
+github-trending-mcp = github_trending_mcp:run

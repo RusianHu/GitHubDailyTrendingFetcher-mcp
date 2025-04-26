@@ -11,18 +11,26 @@
 - 自动处理同名文件，避免覆盖
 - 提供完整的进度报告和日志记录
 
-## 安装依赖
+## 安装方法
+
+### 从本地安装
 
 ```bash
-pip install fastmcp requests beautifulsoup4 pydantic
+# 克隆仓库
+git clone https://github.com/RusianHu/GitHubDailyTrendingFetcher-mcp.git
+cd GitHubDailyTrendingFetcher-mcp
+
 ```
 
 ## 使用方法
 
-### 直接运行
+### 作为命令行工具运行
+
+安装后，可以直接在命令行中运行：
 
 ```bash
-python github_trending_mcp.py
+# 使用 Python 模块方式运行（推荐）
+python -m github_trending_mcp
 ```
 
 ### 作为 MCP 服务集成到 Roo Code
@@ -124,6 +132,25 @@ os.environ["PROXY_PROTOCOL"] = "socks5"
 
 # 然后运行或导入 github_trending_mcp
 import github_trending_mcp
+
+# 运行 MCP 服务（推荐方式是使用 python -m github_trending_mcp 命令）
+github_trending_mcp.run()
+
+# 或者直接调用工具函数（需要自己处理异步）
+import asyncio
+from fastmcp import Context
+
+async def main():
+    ctx = Context()
+    request = github_trending_mcp.TrendingRequest(
+        repo_limit=5,
+        use_proxy=True,
+        save_to_file=True
+    )
+    result = await github_trending_mcp.get_github_trending(request, ctx)
+    print(result)
+
+asyncio.run(main())
 ```
 
 ## API 参考

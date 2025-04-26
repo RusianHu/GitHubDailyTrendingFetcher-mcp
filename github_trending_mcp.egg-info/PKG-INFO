@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: github-trending-mcp
+Version: 1.0.0
+Summary: GitHub Trending MCP - 获取 GitHub 热门仓库的 MCP 服务
+Author: RusianHu
+Author-email: hu_bo_cheng@qq.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: fastmcp>=0.1.0
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: beautifulsoup4>=4.9.3
+Requires-Dist: pydantic>=1.8.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

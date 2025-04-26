@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+github_trending_mcp/__init__.py
+github_trending_mcp/__main__.py
+github_trending_mcp.egg-info/PKG-INFO
+github_trending_mcp.egg-info/SOURCES.txt
+github_trending_mcp.egg-info/dependency_links.txt
+github_trending_mcp.egg-info/entry_points.txt
+github_trending_mcp.egg-info/requires.txt
+github_trending_mcp.egg-info/top_level.txt
