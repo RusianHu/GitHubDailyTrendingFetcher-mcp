@@ -1,7 +1,7 @@
 # GitHub Trending MCP
 
 这是一个基于 FastMCP 框架的 GitHub 热门仓库获取工具，可以一次性获取 GitHub 当日的可选个数的热门仓库的详细信息，包括名称、链接、描述和 README 内容。
-这样你就不用一篇一篇的翻README来总结博客了，可以节省AI 的 Prompt 。
+这样你就不用一篇一篇的翻README来总结博客了，可以节省AI 的 Tokens 。
 
 ## 功能特点
 
