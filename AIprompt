@@ -2,3 +2,7 @@
 允许多次请求实现所有目标，要求最后输出文本长度并一次性输出所有完整内容，使用 markdown 格式。
 充分利用 Artifacts 工具制作，注意给出相应的名称和路径。
 给我一个示例的输出结果。
+
+
+利用 FastMCP ，帮我把这个脚本 @github_trending.py 转换成MCP 服务， use context7 查询 /jlowin/fastmcp 。
+REPO_LIMIT 可以作为MCP服务的工具参数， PROXY_CONFIG 可以作为环境变量传入 。
