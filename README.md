@@ -10,7 +10,6 @@
 - 支持代理配置（通过环境变量）
 - 支持将结果保存为 Markdown 文件
 - 自动处理同名文件，避免覆盖
-- 提供完整的进度报告和日志记录
 
 ## 安装方法
 
@@ -128,39 +127,6 @@ export PROXY_PROTOCOL=socks5
     }
   }
 }
-```
-
-### 在 Python 代码中设置环境变量
-
-```python
-import os
-
-# 设置环境变量
-os.environ["PROXY_HOST"] = "127.0.0.1"
-os.environ["PROXY_PORT"] = "10808"
-os.environ["PROXY_PROTOCOL"] = "socks5"
-
-# 然后运行或导入 github_trending_mcp
-import github_trending_mcp
-
-# 运行 MCP 服务（推荐方式是使用 python -m github_trending_mcp 命令）
-github_trending_mcp.run()
-
-# 或者直接调用工具函数（需要自己处理异步）
-import asyncio
-from fastmcp import Context
-
-async def main():
-    ctx = Context()
-    request = github_trending_mcp.TrendingRequest(
-        repo_limit=5,
-        use_proxy=True,
-        save_to_file=True
-    )
-    result = await github_trending_mcp.get_github_trending(request, ctx)
-    print(result)
-
-asyncio.run(main())
 ```
 
 ## API 参考
