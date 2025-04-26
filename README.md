@@ -13,6 +13,13 @@
 
 ## 安装方法
 
+### 从仓库安装
+
+```bash
+# 使用pip从GitHub仓库安装
+pip install git+https://github.com/RusianHu/GitHubDailyTrendingFetcher-mcp.git
+```
+
 ### 从本地安装
 
 ```bash
@@ -20,6 +27,8 @@
 git clone https://github.com/RusianHu/GitHubDailyTrendingFetcher-mcp.git
 cd GitHubDailyTrendingFetcher-mcp
 
+# 安装到本地环境
+pip install -e .
 ```
 
 ## 使用方法
