@@ -152,10 +152,19 @@ if __name__ == "__main__":
     if SAVE_TO_FILE:
         # 生成带有日期的文件名
         current_date = datetime.now().strftime("%Y-%m-%d")
-        file_name = f"github_trending_{current_date}.md"
+        base_file_name = f"github_trending_{current_date}.md"
         # 获取脚本所在目录的路径
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        file_path = os.path.join(script_dir, file_name)
+
+        # 处理同名文件
+        file_path = os.path.join(script_dir, base_file_name)
+        counter = 1
+
+        # 如果文件已存在，则添加序号
+        while os.path.exists(file_path):
+            file_name = f"github_trending_{current_date}_{counter}.md"
+            file_path = os.path.join(script_dir, file_name)
+            counter += 1
 
         try:
             with open(file_path, "w", encoding="utf-8") as f:
